@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PromotionsCheckout.Services.PromotionStrategiesServices
 {
-    public class AdditionalOffer
+    public class ComboOffer
     {
     }
 }
