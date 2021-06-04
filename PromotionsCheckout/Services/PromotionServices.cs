@@ -10,7 +10,9 @@ namespace PromotionsCheckout.Services
         public ProductOffers ApplyProductPromotion(List<ProductCheckout> checkoutProductList, List<Promotions> promotions)
         {
 
-          
+            ProductOffers productOffers = new ProductOffers();
+
+            List<Interfaces.IPromotionStrategy> strategies = new List<Interfaces.IPromotionStrategy>();
 
             
             throw new NotImplementedException();
