@@ -1,6 +1,8 @@
 ﻿using PromotionsCheckout.Entities;
+using PromotionsCheckout.Helper;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PromotionsCheckout.Services.PromotionStrategiesServices
@@ -40,9 +42,17 @@ namespace PromotionsCheckout.Services.PromotionStrategiesServices
 
         }
 
-        public bool IsExecute(ProductCheckout proudctCheckout, List<Promotions> promotions)
+        public bool IsExecute(ProductCheckout productCheckout, List<Promotions> promotions)
         {
-            throw new NotImplementedException();
+            this.productCheckout = productCheckout;
+            appliedPromotion = promotions.Where(x => x.ProductCode == productCheckout.ProductCode).FirstOrDefault();
+            if (appliedPromotion != null && appliedPromotion.PromotionType == PromotionType.Single.ToString())
+            {
+                productCheckout.IsValid = true;
+                return true;
+            }
+
+            return false;
         }
     }
 }
