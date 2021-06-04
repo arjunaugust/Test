@@ -4,7 +4,18 @@ using System.Text;
 
 namespace PromotionsCheckout.Entities
 {
-    class ProductCheckout
+    public class ProductCheckout
     {
+        public string ProductCode { get; set; }
+
+        public bool InOffer { get; set; }
+
+        public int Qunatity { get; set; }
+
+        public double DefaultPrice { get; set; }
+
+        public double FinalPrice { get; set; }
+
+        public bool IsValid { get; set; }
     }
 }
