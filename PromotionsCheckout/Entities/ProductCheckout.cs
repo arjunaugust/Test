@@ -10,7 +10,7 @@ namespace PromotionsCheckout.Entities
 
         public bool InOffer { get; set; }
 
-        public int Qunatity { get; set; }
+        public int Quantity { get; set; }
 
         public double DefaultPrice { get; set; }
 

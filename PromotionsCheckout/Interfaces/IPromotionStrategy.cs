@@ -8,7 +8,7 @@ namespace PromotionsCheckout.Interfaces
     {
         bool IsExecute(Entities.ProductCheckout proudctCheckout, List<Entities.Promotions> promotions);
 
-        double CalculcateFinalProductProce(List<Entities.ProductCheckout> checkoutLists);
+        double CalculcateFinalProductPrice(List<Entities.ProductCheckout> checkoutLists);
 
     }
 }
