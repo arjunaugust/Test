@@ -33,7 +33,7 @@ namespace PromotionsCheckout.Services.PromotionStrategiesServices
                 int secondQuantity = 0;
                 if(productsCheckoutList.Count > 1)
                 {
-                    firstQuantity = productsCheckoutList.FirstOrDefault().Quantity;
+                    firstQuantity = productsCheckoutList[0].Quantity;
                     
                 }
 

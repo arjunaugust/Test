@@ -84,7 +84,7 @@ namespace PromotionsCheckout.Test
                 new ProductCheckout() { ProductCode = "B", Quantity = 5, DefaultPrice = 30 },
                 new ProductCheckout() { ProductCode = "C", Quantity = 1, DefaultPrice = 20 },
                 new ProductCheckout() { ProductCode = "D", Quantity = 1, DefaultPrice = 15 } };
-            double expectedValue = 280;
+            double expectedValue = 270;
             double actualValue = promotionService.ApplyProductPromotion(orderCart, promotions).TotalPrice;
             Assert.AreEqual(expectedValue, actualValue);
         }
