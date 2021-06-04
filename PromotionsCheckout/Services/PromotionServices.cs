@@ -15,6 +15,7 @@ namespace PromotionsCheckout.Services
 
             List<Interfaces.IPromotionStrategy> strategies = new List<Interfaces.IPromotionStrategy>();
             strategies.Add(new AdditionalOffer());
+            strategies.Add(new ComboOffer());
 
             try
             {

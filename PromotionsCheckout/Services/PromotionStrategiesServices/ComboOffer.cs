@@ -92,7 +92,7 @@ namespace PromotionsCheckout.Services.PromotionStrategiesServices
             catch (Exception ex)
             {
 
-                Console.WriteLine("Error in ComboOffer :" + e.Message);
+                Console.WriteLine("Error in ComboOffer :" + ex.Message);
             }
             
 
