@@ -45,5 +45,28 @@ namespace PromotionsCheckout.Test
             Assert.AreEqual(expectedValue, actualValue);
         }
 
+
+        /// <summary>
+        /// Scenario B
+        /// 5 * A =130 + 2*50
+        /// 5 * B =45 + 45 + 30
+        /// 1 * C =28
+        //Total = 370 
+        /// </summary>
+        [Test]
+        public void TwoOfferSingle_Test()
+        {
+            List<ProductCheckout> orderCart = new List<ProductCheckout>() 
+            { 
+                new ProductCheckout() { ProductCode = "A", Quantity = 5, DefaultPrice = 50 },
+                new ProductCheckout() { ProductCode = "B", Quantity = 5, DefaultPrice = 30 }, 
+                new ProductCheckout() { ProductCode = "C", Quantity = 1, DefaultPrice = 20 } };
+            double expectedValue = 350;
+            double actualValue = promotionService.ApplyProductPromotion(
+                orderCart,
+                promotions).TotalPrice;
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
     }
 }
