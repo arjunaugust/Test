@@ -9,6 +9,10 @@ namespace PromotionsCheckout.Services
     {
         public ProductOffers ApplyProductPromotion(List<ProductCheckout> checkoutProductList, List<Promotions> promotions)
         {
+
+          
+
+            
             throw new NotImplementedException();
         }
     }
